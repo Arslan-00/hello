@@ -1,0 +1,155 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    color: antiquewhite;
+    font-family: sans-serif, monospace;
+
+}
+
+:root {
+    --color-bg: #161024;
+    --color-bg-varient: #dbdbee;
+    --color-primary: #161024;
+    --color-primary-varient: rgba(77, 181, 255, 0.4);
+
+    --color-white: #fff;
+    --color-light: rgba(255, 255, 255, 0.6);
+    --container-width-lg: 75%;
+    --container-width-md: 86%;
+    --container-width-sm: 90%;
+    --transition: all 400ms ease:
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    background-color: #dbdbee;
+    width: 0.5rem;
+
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 1rem;
+    background-color: #161024;
+}
+
+body {
+    font-family: sans-serif;
+    background: var(--color-bg);
+    color: var(--color-white);
+    line-height: 1.7;
+    background-image: url(../src/assets/2.svg);
+
+}
+
+/* =========== GENREAL STYLE ================= */
+.container {
+    width: var(--container-width-lg);
+    margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5
+ {
+    font-weight: 500;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+section {
+    margin-top: 8rem;
+
+}
+
+section>h2,
+section>h4 {
+    text-align: center;
+    color: whitesmoke;
+
+}
+
+section>h2 {
+    color: var(--color-primary);
+    margin-bottom: 3rem;
+}
+
+.text-light {
+    color: var(--color-light);
+}
+
+a {
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--color-white);
+}
+
+.btn {
+    width: max-content;
+    display: inline-block;
+    color: aliceblue;
+    padding: 0.75rem;
+    border-radius: 4rem;
+    cursor: pointer;
+    border: 1px solid var(--color-primary);
+    transition: var(--transition);
+
+}
+
+.btn:hover {
+    background: transparent;
+    color: white;
+    box-shadow: rgba(77, 181, 255, 0.4) 2px 2px 10px 11px;
+    border-color: transparent;
+}
+
+.btn-primary {
+    background: lightgray;
+    color: black;
+
+}
+
+img {
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4rem;
+}
+
+/* ==========  MEDIA QUERIES (MEDIUM DEVICES) ========= */
+
+@media screen and (max-width:1024px) {
+    .container {
+        width: var(--container-width-md);
+    }
+
+    section {
+        margin-top: 6rem;
+    }
+}
+
+/* ==========  MEDIA QUERIES (SMALL DEVICES) ========= */
+
+@media screen and (max-width:600px) {
+    .container {
+        width: var(--container-width-sm);
+    }
+
+    section>h2 {
+        margin-top: 2rem;
+    }
+}
